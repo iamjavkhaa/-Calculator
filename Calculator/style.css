@@ -3,35 +3,128 @@
     margin: 0;
     padding: 0;
     font-size: 1.2rem;
-    border-radius: 3px;
+    border-radius: 30px;
+    border: none !important;
+    margin: 3px;
+}
+
+html {
+    margin: 0;
 }
 
 :root {
     --grid-size: 80px;
+    --back: linear-gradient(to top left, #fcffe2, #c65deb);
+    --back-reversed: linear-gradient(to bottom right, #ffffff3d, #c75eeca6);
 }
 
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: var(--back);
+    margin: 0 !important; 
+    background-position: center;
+}
+
+.calc-cont {
+    width: fit-content;
+    max-width: min-content;
+    height: min-content;
+    margin: auto;
+    transform: translateY(32vh);
+    padding: 17px;
+    background-color: #e5bbe5;
+    background-image: var(--back-reversed);
+    box-shadow: 3px 3px 13px 1px white;
+}
+
+.number , .psdaaa{
+    background-color: white;
+}
+.number:hover {
+    background-color: rgba(0, 0, 0, 0.12);
+}
+.psdaaa:hover {
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+.number {
+    background-color: white;
+}
+
+.equal , .span-two , .del {
+    background-color: white;
+}
+.span-two:hover {
+    background-color: rgba(0, 0, 0, 0.12);
+}
+.del:hover {
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+
+#green {
+    background-color: #00ffea;
+}
+#green:hover {
+    background-color: #00ccff;
+}
+
+#orange {
+    background-color: orange;
+}
+#orange:hover {
+    background-color: rgb(255, 114, 63);
+}
+
+#pink {
+    background-color: pink;
+}
+#pink:hover {
+    background-color: rgb(250, 147, 164);
+}
+
+#blue {
+    background-color: #8c56ff;
+}
+#blue:hover {
+    background-color: #651dff;
+}
+
+#purple {
+    background-color: #f55df5;
+}
+#purple:hover {
+    background-color: #e12de1
+}
 
 .calculator-grid {
     width: max-content;
-    margin: auto;
-    transform: translateY(35vh);
+    height: auto;
     display: grid;
     grid-template-columns: var(--grid-size) var(--grid-size) var(--grid-size) var(--grid-size);
-    grid-template-rows: var(--grid-size) var(--grid-size) var(--grid-size) var(--grid-size)  var(--grid-size)   var(--grid-size) ;
+    /* grid-template-rows: var(--grid-size) var(--grid-size) var(--grid-size) var(--grid-size)  var(--grid-size)   var(--grid-size) ; */
+    grid-template-rows: var(--grid-size) var(--grid-size) var(--grid-size) var(--grid-size)  var(--grid-size)   ;
 }
 
 .output {
-    grid-column: 1/5;
+    border: 1px solid black;
+    background-color: white;
     border: 1px solid black;
 }
 
 .current {
     width: 100%;
-    height: 50%;
+    min-height: 70px;
+    max-height: fit-content;
+    word-wrap: break-word;
+    word-break: break-all;
     display: flex;
     flex-direction: row-reverse;
     font-size: 1.5rem;
-    padding: 10px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
 }
 
 .span-two {
@@ -40,4 +133,8 @@
 
 .equal {
     grid-column: 3/5;
+}
+
+button:hover {
+    cursor: pointer;
 }
