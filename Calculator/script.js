@@ -80,12 +80,34 @@ dot.addEventListener('click' ,
     }
 )
 
+
+
+
 //        key darahad ajillah functions START
 
-
-document.addEventListener('keyup', 
+document.addEventListener('keydown', 
     (par) => {
+
+        //    1
+
         if(par.keyCode === 49) {
+
+            if(ifEqualClicked === 'clicked') {
+                current.innerText = 1 ;
+                ifEqualClicked = '';
+                return
+            }
+
+            if(exceptZero.test(current.innerText) == true && current.innerText.length == 1 ) {
+                current.innerText = ''
+                current.innerText += 1
+            } else {
+                current.innerText += 1
+            }
+
+        }
+
+        if(par.keyCode === 97) {
 
             if(ifEqualClicked === 'clicked') {
                 current.innerText = 1 ;
@@ -121,9 +143,41 @@ document.addEventListener('keyup',
 
         }
 
+        if(par.keyCode === 98) {
+
+            if(ifEqualClicked === 'clicked') {
+                current.innerText = 2 ;
+                ifEqualClicked = '';
+                return
+            }
+
+            if(exceptZero.test(current.innerText) == true && current.innerText.length == 1 ) {
+                current.innerText = ''
+                current.innerText += 2
+            } else {
+                current.innerText += 2
+            }
+
+        }
+
         //      3
 
         if(par.keyCode === 51) {
+            if(ifEqualClicked === 'clicked') {
+                current.innerText = 3 ;
+                ifEqualClicked = '';
+                return
+            }
+
+            if(exceptZero.test(current.innerText) == true && current.innerText.length == 1 ) {
+                current.innerText = ''
+                current.innerText += 3
+            } else {
+                current.innerText += 3
+            }
+        }
+
+        if(par.keyCode === 99) {
             if(ifEqualClicked === 'clicked') {
                 current.innerText = 3 ;
                 ifEqualClicked = '';
@@ -155,9 +209,40 @@ document.addEventListener('keyup',
             }
         }
 
+        if(par.keyCode === 100) {
+            if(ifEqualClicked === 'clicked') {
+                current.innerText = 4 ;
+                ifEqualClicked = '';
+                return
+            }
+
+            if(exceptZero.test(current.innerText) == true && current.innerText.length == 1 ) {
+                current.innerText = ''
+                current.innerText += 4
+            } else {
+                current.innerText += 4
+            }
+        }
+
+
         //  5
 
         if(par.keyCode === 53) {
+            if(ifEqualClicked === 'clicked') {
+                current.innerText = 5 ;
+                ifEqualClicked = '';
+                return
+            }
+
+            if(exceptZero.test(current.innerText) == true && current.innerText.length == 1 ) {
+                current.innerText = ''
+                current.innerText += 5
+            } else {
+                current.innerText += 5
+            }
+        }
+
+        if(par.keyCode === 101) {
             if(ifEqualClicked === 'clicked') {
                 current.innerText = 5 ;
                 ifEqualClicked = '';
@@ -189,9 +274,39 @@ document.addEventListener('keyup',
             }
         }
         
+        if(par.keyCode === 102) {
+            if(ifEqualClicked === 'clicked') {
+                current.innerText = 6 ;
+                ifEqualClicked = '';
+                return
+            }
+
+            if(exceptZero.test(current.innerText) == true && current.innerText.length == 1 ) {
+                current.innerText = ''
+                current.innerText += 6
+            } else {
+                current.innerText += 6
+            }
+        }
+        
         //  7
 
         if(par.keyCode === 55) {
+            if(ifEqualClicked === 'clicked') {
+                current.innerText = 7 ;
+                ifEqualClicked = '';
+                return
+            }
+
+            if(exceptZero.test(current.innerText) == true && current.innerText.length == 1 ) {
+                current.innerText = ''
+                current.innerText += 7
+            } else {
+                current.innerText += 7
+            }
+        }
+
+        if(par.keyCode === 103) {
             if(ifEqualClicked === 'clicked') {
                 current.innerText = 7 ;
                 ifEqualClicked = '';
@@ -223,9 +338,39 @@ document.addEventListener('keyup',
             }
         }
 
+        if(par.keyCode === 104) {
+            if(ifEqualClicked === 'clicked') {
+                current.innerText = 8 ;
+                ifEqualClicked = '';
+                return
+            }
+
+            if(exceptZero.test(current.innerText) == true && current.innerText.length == 1 ) {
+                current.innerText = ''
+                current.innerText += 8
+            } else {
+                current.innerText += 8
+            }
+        }
+
         //  9
 
         if(par.keyCode === 57) {
+            if(ifEqualClicked === 'clicked') {
+                current.innerText = 9 ;
+                ifEqualClicked = '';
+                return
+            }
+
+            if(exceptZero.test(current.innerText) == true && current.innerText.length == 1 ) {
+                current.innerText = ''
+                current.innerText += 9;
+            } else {
+                current.innerText += 9 ;
+            }
+        }
+
+        if(par.keyCode === 105) {
             if(ifEqualClicked === 'clicked') {
                 current.innerText = 9 ;
                 ifEqualClicked = '';
@@ -257,9 +402,33 @@ document.addEventListener('keyup',
             }
         }
 
+        if(par.keyCode === 96) {
+            if(ifEqualClicked === 'clicked') {
+                current.innerText = 0 ;
+                ifEqualClicked = '';
+                return
+            }
+
+            if(exceptZero.test(current.innerText) == true && current.innerText.length == 1 ) {
+                current.innerText = ''
+                current.innerText += 0
+            } else {
+                current.innerText += 0
+            }
+        }
+
         //   .
 
         if(par.keyCode === 190) {
+            let array = current.innerText.split(/[=+/-]/);
+            if(array[array.length - 1].includes('.') || checkNum.test(current.innerText[current.innerText.length - 1]) === true   ){
+                return
+            } else {
+                current.innerText += '.'
+            }
+        }
+
+        if(par.keyCode === 110) {
             let array = current.innerText.split(/[=+/-]/);
             if(array[array.length - 1].includes('.') || checkNum.test(current.innerText[current.innerText.length - 1]) === true   ){
                 return
@@ -272,7 +441,6 @@ document.addEventListener('keyup',
 
         if(par.keyCode === 8) {
             if(current.innerText.length == 1) {
-                console.log('1 hen char uldlee')
                 current.innerText = 0;
             } else {
                 current.innerText = current.innerText.substring(0, current.innerText.length - 1) 
@@ -281,7 +449,22 @@ document.addEventListener('keyup',
 
         //    /
 
-        if(par.keyCode === 191) {
+        if(par.keyCode === 191 ) {
+            if(ifEqualClicked === 'clicked') {
+                ifEqualClicked = '';
+            }
+
+            if(checkNum.test(current.innerText[current.innerText.length - 1]) === false) {
+                current.innerText += '/';
+            } else if (checkNum.test(current.innerText) === true) {
+                let newCurrent = current.innerText.substring(0, current.innerText.length - 1);
+                newCurrent += '/';
+                current.innerText = newCurrent;
+                console.log()
+            }
+        }
+
+        if(par.keyCode === 111 ) {
             if(ifEqualClicked === 'clicked') {
                 ifEqualClicked = '';
             }
@@ -299,28 +482,98 @@ document.addEventListener('keyup',
         //    *
 
         if(par.keyCode === 106) {
-            alert('42')
+            if(ifEqualClicked === 'clicked') {
+                ifEqualClicked = '';
+            }
+
+            if(checkNum.test(current.innerText[current.innerText.length - 1]) === false) {
+                current.innerText += '*';
+            } else if (checkNum.test(current.innerText) === true) {
+                let newCurrent = current.innerText.substring(0, current.innerText.length - 1);
+                newCurrent += '*';
+                current.innerText = newCurrent;
+                console.log()
+            }
+        }
+
+        //      -
+             
+
+        if(par.keyCode === 189) {
+            if(ifEqualClicked === 'clicked') {
+                ifEqualClicked = '';
+            }
+
+            if(checkNum.test(current.innerText[current.innerText.length - 1]) === false) {
+                current.innerText += '-';
+            } else if (checkNum.test(current.innerText) === true) {
+                let newCurrent = current.innerText.substring(0, current.innerText.length - 1);
+                newCurrent += '-';
+                current.innerText = newCurrent;
+                console.log()
+            }
         }
 
 
+        if(par.keyCode ===  109) {
+            if(ifEqualClicked === 'clicked') {
+                ifEqualClicked = '';
+            }
+
+            if(checkNum.test(current.innerText[current.innerText.length - 1]) === false) {
+                current.innerText += '-';
+            } else if (checkNum.test(current.innerText) === true) {
+                let newCurrent = current.innerText.substring(0, current.innerText.length - 1);
+                newCurrent += '-';
+                current.innerText = newCurrent;
+                console.log()
+            }
+        }
 
 
+        //     +
+
+        if(par.keyCode === 187) {
+            if(ifEqualClicked === 'clicked') {
+                ifEqualClicked = '';
+            }
+
+            if(checkNum.test(current.innerText[current.innerText.length - 1]) === false) {
+                current.innerText += '+';
+            } else if (checkNum.test(current.innerText) === true) {
+                let newCurrent = current.innerText.substring(0, current.innerText.length - 1);
+                newCurrent += '+';
+                current.innerText = newCurrent;
+                console.log()
+            }
+        }
 
 
+        if(par.keyCode === 107) {
+            if(ifEqualClicked === 'clicked') {
+                ifEqualClicked = '';
+            }
 
+            if(checkNum.test(current.innerText[current.innerText.length - 1]) === false) {
+                current.innerText += '+';
+            } else if (checkNum.test(current.innerText) === true) {
+                let newCurrent = current.innerText.substring(0, current.innerText.length - 1);
+                newCurrent += '+';
+                current.innerText = newCurrent;
+                console.log()
+            }
+        }
 
+        //     =
 
-
-
-
-
-
-
-
-
+        if(par.keyCode === 13) {
+            if(checkNum.test(current.innerText[current.innerText.length - 1]) === false) {
+                current.innerText = eval(current.innerText);
+        
+                ifEqualClicked = 'clicked';
+            }
+        }
     }
 )
-
-
 
 //        key darahad ajillah functions END
