@@ -16,6 +16,7 @@ html {
     --grid-size: 80px;
     --back: linear-gradient(to top left, #fcffe2, #c65deb);
     --back-reversed: linear-gradient(to bottom right, #ffffff3d, #c75eeca6);
+    /* --back-reversed: linear-gradient(to bottom right, #ff95e182, #c75eeca6); */
 }
 
 body {
