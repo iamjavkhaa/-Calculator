@@ -32,7 +32,7 @@ body {
     max-width: min-content;
     height: min-content;
     margin: auto;
-    transform: translateY(32vh);
+    transform: translateY(16%);
     padding: 17px;
     background-color: #e5bbe5;
     background-image: var(--back-reversed);
