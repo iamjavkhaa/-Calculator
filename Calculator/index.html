@@ -12,12 +12,24 @@
 
     <div id="grand-parent">
         <div class='tr'>
-            <div class="td" ></div>
+            <input class="td" />
         </div>
-    </div>
+        
+        <button class="add-column" onclick="addColumn()" >+</button>
+        <button class="delete-column" onclick="deleteColumn()" >-</button>
+        
+        <button class="add-row" onclick="addRow()" >+</button>
+        <button class="delete-row" onclick="deleteRow()" >-</button>
 
-    <button onclick="addColumn()" >add Column</button>
-    <button onclick="addRow()" >add Row</button>
+
+        <input onchange="updateCustomNumberColumn()" class="custom-column" type="number" placeholder="нэмэх утга оруул" >
+        <input onchange="updateCustomNumberRow()" class="custom-row" type="number" placeholder="нэмэх утга оруул" >
+
+    </div>
+    
+    
+   
+
 
     
 

@@ -1,11 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#grand-parent {
+    width: fit-content;
+
+    position: relative;
+}
 
 .tr {
     display: flex;
 }
 
 .td {
-    width: 50px;
-    height: 50px;
-    background-color: blue;
+    width: 110px;
+    height: 30px;
+    background-color: rgba(128, 128, 128, 0.391);
     margin: 5px ;
+}
+
+.add-column , .add-row , .delete-column , .delete-row {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;  
+} 
+
+.add-column {
+    position: absolute;
+    right: -120px;
+    top: 10px;
+    background-color: cyan;
+}
+
+.add-row {
+    position: absolute;
+    bottom: -50px;
+    left: 10px;
+    background-color: #fa6798a8;
+}
+
+.add-column:hover {
+    cursor: pointer;
+
+}
+.add-row:hover {
+    cursor: pointer;
+}
+.delete-column:hover {
+    cursor: pointer;
+}
+.delete-row:hover {
+    cursor: pointer;
+}
+/*   delete buttons are here */
+
+.delete-column {
+    position: absolute;
+    right: -120px;
+    top: 50px;
+    background-color: cyan;
+}
+
+.delete-row {
+    position: absolute;
+    bottom: -90px;
+    left: 10px;
+    background-color: #fa6798a8;
+}
+
+
+.custom-column {
+    position: absolute;
+    right: -350px;
+    top: 15px;
+    background-color: cyan;
+}
+
+
+.custom-row {
+    position: absolute;
+    bottom: -120px;
+    left: 10px;
+    background-color: #fa6798a8;
 }
